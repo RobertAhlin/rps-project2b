@@ -3,6 +3,7 @@ body {
     text-align: center;
 }
 
+
 .header-style {
     background-color: #ffffff;
     box-shadow: 0 10px 10px #3a3a3a;
@@ -11,4 +12,29 @@ body {
     margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.footer-style {
+    position: fixed;
+    bottom: 5px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    box-shadow: 0 10px 10px #3a3a3a;
+    border-radius: 50px 10px;
+    width: 80%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Media query: for really narrow screens (444px and smaller) */
+@media screen and (max-width: 480px) {
+    .header-style {
+            border-radius: 25px 5px;
+            width: 95%;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
 }

@@ -7,6 +7,7 @@ let cheatCodeActivated = false;
 function makePlayerChoice(choice) {
     playerChoice = choice;
     displayChoices(`You picked ${choice}`, "");
+    displayMessage("");
 }
 
 // Function to generate robot's choice
