@@ -1,14 +1,28 @@
 // Variables to keep track of the game
-let playerChoice = null;
-let robotChoice = null;
 let cheatCodeActivated = false;
 
-// Function when player makes a choice
+/*// Function when player makes a choice
 function makePlayerChoice(choice) {
     playerChoice = choice;
     displayChoices(`You picked ${choice}`, "");
     displayMessage("");
 }
+*/
+// Function when player makes a choice
+function makePlayerChoice(choice) {
+    playerChoice = choice;
+    displayChoices(`You picked ${choice}`, "");
+    displayMessage(""); // Clear the result message
+    document.getElementById('playerChoice').textContent = choice; // Display player's choice
+    document.getElementById('computerChoice').textContent = ""; // Clear computer's choice
+    document.getElementById('winner').textContent = ""; // Clear the winner
+}
+
+// Event listeners for player's choice images
+document.getElementById('rock').addEventListener('click', () => makePlayerChoice('Rock'));
+document.getElementById('paper').addEventListener('click', () => makePlayerChoice('Paper'));
+document.getElementById('scissors').addEventListener('click', () => makePlayerChoice('Scissors'));
+
 
 // Function to generate robot's choice
 function generateRobotChoice() {

@@ -24,6 +24,12 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+#playerChoices img {
+    height: 100px;
+}
+
+
 #cheatCode {
     width: 60px;
 }
