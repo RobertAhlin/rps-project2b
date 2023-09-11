@@ -44,9 +44,7 @@ function generateRobotChoice() {
 
 // Function to figure out who wins and show the result
 function setWinner(playerChoice, robotChoice) {
-    if (cheatCodeActivated) {
-        return ' - You win! (You cheater...!)';
-    } else if (playerChoice === robotChoice) {
+    if (playerChoice === robotChoice) {
         return " - It's a tie!";
     } else if (
         (playerChoice === 'rock' && robotChoice === 'scissors') ||
@@ -94,7 +92,7 @@ document.getElementById('play').addEventListener('click', function () {
 });
 
 // When player types a cheat code
-document.getElementById('cheatCode').addEventListener('input', function (event) {
+document.getElementById('cheat-code').addEventListener('input', function (event) {
     if (event.target.value.toLowerCase() === 'godmode') {
         cheatCodeActivated = true;
         displayCheatMessage(' Activated!');
@@ -104,7 +102,7 @@ document.getElementById('cheatCode').addEventListener('input', function (event) 
 // Function to reset the cheat code
 function resetCheatCode() {
     cheatCodeActivated = false;
-    document.getElementById('cheatCode').value = '';
+    document.getElementById('cheat-code').value = '';
     displayCheatMessage(' Cheat code reset.');
 };
 
