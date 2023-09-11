@@ -12,13 +12,19 @@ function updateRobotScore() {
     document.getElementById('robot-score').textContent = robotScore;
 }
 
+// Function to reset the scores
+function resetScores() {
+    playerScore = 0;
+    robotScore = 0;
+    updatePlayerScore();
+    updateRobotScore();
+}
+
 // Function when player makes a choice
 function makePlayerChoice(choice) {
     playerChoice = choice;
     displayChoices(`You picked ${choice}`, "");
     displayMessage(""); // Clear the result message
-    
-        
 }
 
 // Event listeners for player's choice images
@@ -47,7 +53,7 @@ function generateRobotChoice() {
 // Function to figure out who wins and show the result
 function setWinner(playerChoice, robotChoice) {
     if (cheatCodeActivated) {
-        return ' - You win! (You cheater....!)';
+        return ' - You win! (You cheater...)';
     } else if (playerChoice === robotChoice) {
         return " - It's a tie!";
     } else if (
@@ -108,7 +114,15 @@ function resetCheatCode() {
     cheatCodeActivated = false;
     document.getElementById('cheat-code').value = '';
     displayCheatMessage(' Cheat code reset.');
-};
+
+    // Delay hiding the message for 5 seconds
+    setTimeout(() => {
+        document.getElementById('cheat-message').textContent = '';
+    }, 5000); // 5000 milliseconds (5 seconds)
+}
 
 // Event listener for the "Reset Cheat" button
-document.getElementById('resetCheat').addEventListener('click', resetCheatCode);
+document.getElementById('reset-cheat').addEventListener('click', resetCheatCode);
+
+// Event listener for the "Reset Scores" button
+document.getElementById('reset-scores').addEventListener('click', resetScores);
