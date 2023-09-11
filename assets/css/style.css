@@ -57,4 +57,12 @@ body {
             padding-top: 2px;
             padding-bottom: 2px;
         }
+    .game-area {
+        border-radius: 25px 5px;
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+}
 }

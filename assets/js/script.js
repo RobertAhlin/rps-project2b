@@ -1,28 +1,31 @@
-// Variables to keep track of the game
 let cheatCodeActivated = false;
+let playerScore = 0;
+let robotScore = 0;
 
-/*// Function when player makes a choice
-function makePlayerChoice(choice) {
-    playerChoice = choice;
-    displayChoices(`You picked ${choice}`, "");
-    displayMessage("");
+// Function to update and display the player's score
+function updatePlayerScore() {
+    document.getElementById('playerScore').textContent = playerScore;
 }
-*/
+
+// Function to update and display the robot's score
+function updateRobotScore() {
+    document.getElementById('robotScore').textContent = robotScore;
+}
+
 // Function when player makes a choice
 function makePlayerChoice(choice) {
     playerChoice = choice;
     displayChoices(`You picked ${choice}`, "");
     displayMessage(""); // Clear the result message
-    document.getElementById('playerChoice').textContent = choice; // Display player's choice
-    document.getElementById('computerChoice').textContent = ""; // Clear computer's choice
-    document.getElementById('winner').textContent = ""; // Clear the winner
+    document.getElementById('playerChoice').textContent = choice;
+    document.getElementById('computerChoice').textContent = "";
+    document.getElementById('winner').textContent = "";
 }
 
 // Event listeners for player's choice images
-document.getElementById('rock').addEventListener('click', () => makePlayerChoice('Rock'));
-document.getElementById('paper').addEventListener('click', () => makePlayerChoice('Paper'));
-document.getElementById('scissors').addEventListener('click', () => makePlayerChoice('Scissors'));
-
+document.getElementById('rock').addEventListener('click', () => makePlayerChoice('rock'));
+document.getElementById('paper').addEventListener('click', () => makePlayerChoice('paper'));
+document.getElementById('scissors').addEventListener('click', () => makePlayerChoice('scissors'));
 
 // Function to generate robot's choice
 function generateRobotChoice() {
@@ -53,8 +56,12 @@ function setWinner(playerChoice, robotChoice) {
         (playerChoice === 'paper' && robotChoice === 'rock') ||
         (playerChoice === 'scissors' && robotChoice === 'paper')
     ) {
-        return ' - You win!';
+        playerScore++; // Increase player's score on win
+        updatePlayerScore(); // Update and display player's score
+        return ` - You win!`;
     } else {
+        robotScore++; // Increase robot's score on win
+        updateRobotScore(); // Update and display robot's score
         return '- Robot wins!';
     }
 }
@@ -69,17 +76,11 @@ function displayCheatMessage(cheatMessage) {
     document.getElementById('cheat-message').textContent = cheatMessage;
 }
 
-
 // Function to display player's and computer's choices
 function displayChoices(player, robot) {
     let message = `${player} ${robot}`;
     document.getElementById('choices').textContent = message;
 }
-
-// When player clicks a button
-document.getElementById('rock').addEventListener('click', () => makePlayerChoice('rock'));
-document.getElementById('paper').addEventListener('click', () => makePlayerChoice('paper'));
-document.getElementById('scissors').addEventListener('click', () => makePlayerChoice('scissors'));
 
 // When player clicks "Play"
 document.getElementById('play').addEventListener('click', function () {
