@@ -25,10 +25,19 @@ body {
     padding-bottom: 10px;
 }
 
+.inline-block {
+    width: 80px;
+    display: inline-block;
+}
+
+.flex-style-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
 #playerChoices img {
     height: 100px;
 }
-
 
 #cheatCode {
     width: 60px;

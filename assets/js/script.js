@@ -4,12 +4,12 @@ let robotScore = 0;
 
 // Function to update and display the player's score
 function updatePlayerScore() {
-    document.getElementById('playerScore').textContent = playerScore;
+    document.getElementById('player-score').textContent = playerScore;
 }
 
 // Function to update and display the robot's score
 function updateRobotScore() {
-    document.getElementById('robotScore').textContent = robotScore;
+    document.getElementById('robot-score').textContent = robotScore;
 }
 
 // Function when player makes a choice
@@ -17,9 +17,6 @@ function makePlayerChoice(choice) {
     playerChoice = choice;
     displayChoices(`You picked ${choice}`, "");
     displayMessage(""); // Clear the result message
-    document.getElementById('playerChoice').textContent = choice;
-    document.getElementById('computerChoice').textContent = "";
-    document.getElementById('winner').textContent = "";
 }
 
 // Event listeners for player's choice images

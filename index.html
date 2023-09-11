@@ -17,14 +17,22 @@
     <main class="game-area">
         <section>
             <h2>Choose your move:</h2>
-            <div id="playerChoices">
+            <div class="flex-style-space-around" id="playerChoices">
                 <img src="assets/images/rock-hand.png" alt="Rock" id="rock">
                 <img src="assets/images/paper-hand.png" alt="Paper" id="paper">
                 <img src="assets/images/scissors-hand.png" alt="Scissors" id="scissors">
             </div>
         </section>
-
+        <hr width="80%">
         <section>
+            <div class="flex-style-space-around">
+                <div>
+                    Player's points:<br><span id="player-score">0</span>
+                </div>
+                <div>
+                    Robot's points:<br><span id="robot-score">0</span>
+                </div>
+            </div>
             <p>Enter code: <br> <input type="text" id="cheatCode"><br><span id="cheat-message"></span></p>
 
             <button id="play">Play</button>
@@ -34,8 +42,7 @@
             <div>
                 <p id="choices"></p>
                 <p id="result"></p>
-                <p>Player's Points: <span id="playerScore">0</span></p>
-                <p>Robot's Points: <span id="robotScore">0</span></p>
+                
             </div>
         </section>
     </main>
