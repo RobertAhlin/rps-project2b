@@ -1,8 +1,23 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Londrina+Solid&family=Permanent+Marker&display=swap');
+
 body {
     background-color: burlywood;
     text-align: center;
 }
 
+.font-style-upper {
+    font-family: 'Londrina Solid', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#font-style-text {
+    font-family: 'Londrina Solid', cursive;
+    letter-spacing: 1px;
+    text-align: center;
+}
 
 .header-style {
     background-color: #ffffff;
@@ -39,7 +54,7 @@ body {
     height: 100px;
 }
 
-#cheatCode {
+#cheat-code {
     width: 60px;
 }
 
@@ -61,11 +76,11 @@ body {
 /* Media query: for really narrow screens (444px and smaller) */
 @media screen and (max-width: 480px) {
     .header-style {
-            border-radius: 25px 5px;
-            width: 95%;
-            padding-top: 2px;
-            padding-bottom: 2px;
-        }
+        border-radius: 25px 5px;
+        width: 95%;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
     .game-area {
         border-radius: 25px 5px;
         width: 95%;
@@ -73,5 +88,14 @@ body {
         margin-top: 10px;
         padding-top: 2px;
         padding-bottom: 2px;
-}
+    }
+
+    .footer-style {
+        bottom: 1px;
+        border-radius: 25px 5px;
+        width: 95%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
 }
