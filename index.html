@@ -6,26 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors - The Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <h1>Rock, Paper, Scissors - The Game</h1>
+    <header class="header-style">
+        <h1>Rock, Paper, Scissors - The Game</h1>
+    </header>
 
-    <p>Choose your move:</p>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-
-    <br>
-
-    <p>Enter cheat code: <input type="text" id="cheatCode"><span id="cheat-message"></span></p>
-
-    <button id="play">Play</button>
     <hr>
-    <div>
-        <span id="choices"></span>
-        <span id="result"></span>
-    </div>
+
+    <main id="game-area">
+        <section>
+            <h2>Choose your move:</h2>
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </section>
+
+        <section>
+            <p>Enter cheat code: <input type="text" id="cheatCode"><span id="cheat-message"></span></p>
+
+            <button id="play">Play</button>
+        </section>
+        <hr>
+        <section>
+            <div>
+                <span id="choices"></span>
+                <span id="result"></span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <button id="resetCheat">Reset Cheat</button>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 

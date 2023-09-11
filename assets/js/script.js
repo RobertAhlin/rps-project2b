@@ -28,9 +28,9 @@ function generateRobotChoice() {
 }
 
 // Function to figure out who wins and show the result
-function determineWinner(playerChoice, robotChoice) {
+function setWinner(playerChoice, robotChoice) {
     if (cheatCodeActivated) {
-        return ' - You win! (You cheater....!)';
+        return ' - You win! (You cheater...!)';
     } else if (playerChoice === robotChoice) {
         return " - It's a tie!";
     } else if (
@@ -76,7 +76,7 @@ document.getElementById('play').addEventListener('click', function () {
     robotChoice = generateRobotChoice();
     displayChoices(`You played ${playerChoice}`, ` vs. Robot played ${robotChoice}`);
 
-    let result = determineWinner(playerChoice, robotChoice);
+    let result = setWinner(playerChoice, robotChoice);
     displayMessage(result);
 });
 
@@ -87,3 +87,13 @@ document.getElementById('cheatCode').addEventListener('input', function (event) 
         displayCheatMessage(' Activated!');
     }
 });
+
+// Function to reset the cheat code
+function resetCheatCode() {
+    cheatCodeActivated = false;
+    document.getElementById('cheatCode').value = '';
+    displayCheatMessage(' Cheat code reset.');
+};
+
+// Event listener for the "Reset Cheat" button
+document.getElementById('resetCheat').addEventListener('click', resetCheatCode);
