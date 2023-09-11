@@ -183,12 +183,15 @@ After struggeling with it for some time I kind of started over with the whole we
 
 ## <a id="credits"></a>Credits
 
-As you probably can see, I have got a lot of insiration from the Love Running project. Hence that was a good walkthroug project and gave me a ton of knowledge.
+<ul>
+<li>For this project I want to credit the Google search engine. It's hard to remember how to write all codes.</li>
+<li>A lot of help comes from search hist at the "stack overflow" forums.</li>
+<li>Hand images of rock, paper and scissors from: <a href="https://www.pngaaa.com/detail/3313784" target="_blank">https://www.pngaaa.com/detail/3313784</a></li>
+</ul>
 
 Other that that:
 All the text are authored by me.
-All the pictures are taken by me or my fiancé.
-The hero logo is done by me.
+
 
 ### <a id="acknoledgements"></a>Acknowledgements
 
