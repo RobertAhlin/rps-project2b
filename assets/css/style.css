@@ -56,21 +56,6 @@ body {
     height: 100px;
 }
 
-.image-swap {
-    cursor: pointer;
-    margin: auto;
-}
-
-.image-swap>img,
-.image-swap:active>img:first-child {
-    display: none;
-}
-
-.image-swap>img:first-child,
-.image-swap:active>img:last-child {
-    display: block;
-}
-
 #cheat-code {
     width: 60px;
 }
