@@ -19,6 +19,7 @@ body {
     text-align: center;
 }
 
+/* Header */
 .header-style {
     background-color: #ffffff;
     box-shadow: 0 10px 10px #3a3a3a;
@@ -29,6 +30,7 @@ body {
     padding-bottom: 10px;
 }
 
+/* Game area */
 .game-area {
     background-color: #ffffff;
     box-shadow: 0 10px 10px #3a3a3a;
@@ -54,10 +56,26 @@ body {
     height: 100px;
 }
 
+.image-swap {
+    cursor: pointer;
+    margin: auto;
+}
+
+.image-swap>img,
+.image-swap:active>img:first-child {
+    display: none;
+}
+
+.image-swap>img:first-child,
+.image-swap:active>img:last-child {
+    display: block;
+}
+
 #cheat-code {
     width: 60px;
 }
 
+/* Footer */
 .footer-style {
     position: fixed;
     bottom: 5px;
@@ -73,7 +91,7 @@ body {
     padding-bottom: 10px;
 }
 
-/* Media query: for really narrow screens (444px and smaller) */
+/* Media query: for really narrow screens (480px and smaller) */
 @media screen and (max-width: 480px) {
     .font-style-upper {
         letter-spacing: 1px;
