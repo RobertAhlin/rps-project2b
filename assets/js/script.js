@@ -27,9 +27,10 @@ function makePlayerChoice(choice) {
     playerChoice = choice;
     displayChoices(`You picked ${choice}`, "");
     displayMessage(""); // Clear the result message.
+    playGame(); // Start the game.
 }
 
-// Event listeners for player's choice images.
+// Event listeners for player's choice buttons.
 document.getElementById('rock').addEventListener('click', () => makePlayerChoice('rock'));
 document.getElementById('paper').addEventListener('click', () => makePlayerChoice('paper'));
 document.getElementById('scissors').addEventListener('click', () => makePlayerChoice('scissors'));
@@ -37,7 +38,7 @@ document.getElementById('scissors').addEventListener('click', () => makePlayerCh
 // Function to generate robot's choice.
 function generateRobotChoice() {
     if (cheatCodeActivated) {
-        // When cheat mode is on, robot always select a losing choice.
+        // When cheat mode is on, robot always selects a losing choice.
         if (playerChoice === 'rock') {
             return 'scissors';
         } else if (playerChoice === 'paper') {
@@ -55,6 +56,8 @@ function generateRobotChoice() {
 // Function to figure out who wins and show the result.
 function setWinner(playerChoice, robotChoice) {
     if (cheatCodeActivated) {
+        playerScore++; // Increase player's score on win.
+        updatePlayerScore(); // Update and display player's score.
         return ' - You win! (You cheater...)';
     } else if (playerChoice === robotChoice) {
         return " - It's a tie!";
@@ -89,8 +92,8 @@ function displayChoices(player, robot) {
     document.getElementById('choices').textContent = message;
 }
 
-// When player clicks "Play".
-document.getElementById('btn-play').addEventListener('click', function () {
+// Function to start the game.
+function playGame() {
     if (playerChoice === null) {
         displayMessage('Pick a move first!');
         return;
@@ -101,14 +104,17 @@ document.getElementById('btn-play').addEventListener('click', function () {
 
     let result = setWinner(playerChoice, robotChoice);
     displayMessage(result);
-});
+}
 
 // When player types a cheat code.
 document.getElementById('cheat-code').addEventListener('input', function (event) {
     if (event.target.value.toLowerCase() === 'godmode') {
         cheatCodeActivated = true;
         displayCheatMessage(' Activated!');
-    } 
+    } else {
+        cheatCodeActivated = false; // Disable cheat mode if the code is not 'godmode'.
+        displayCheatMessage(''); // Clear cheat message.
+    }
 });
 
 // Function to reset the cheat code.
@@ -123,7 +129,7 @@ function resetCheatCode() {
     }, 5000);
 }
 
-//For "Reset Cheat" button.
+// For "Reset Cheat" button.
 document.getElementById('reset-cheat').addEventListener('click', resetCheatCode);
 
 // For "Reset Scores" button.
