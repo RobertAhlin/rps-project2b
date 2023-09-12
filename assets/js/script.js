@@ -98,12 +98,15 @@ function playGame() {
         displayMessage('Pick a move first!');
         return;
     }
-
-    robotChoice = generateRobotChoice();
-    displayChoices(`You played ${playerChoice}`, ` vs. Robot played ${robotChoice}`);
-
-    let result = setWinner(playerChoice, robotChoice);
-    displayMessage(result);
+    // Delay hiding the message for 2 seconds.
+    setTimeout(() => {
+        robotChoice = generateRobotChoice();
+        displayChoices(`You played ${playerChoice}`, ` vs. Robot played ${robotChoice}`);
+        let result = setWinner(playerChoice, robotChoice);
+        displayMessage(result);
+    }, 2000);
+    
+    
 }
 
 // When player types a cheat code.
