@@ -5,6 +5,7 @@ body {
     background-color: burlywood;
     text-align: center;
 }
+
 hr {
     width: 80%;
 }
@@ -99,6 +100,10 @@ hr {
     margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+#index-footer-margin {
+    margin-bottom: 100px;
 }
 
 .hidden-text {
