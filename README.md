@@ -1,10 +1,8 @@
 # <a id="the-game"></a>Rock, Paper, Scissors - The Game
 
-## <a id="first-project"></a>First project at Code Institute
+## Second project at Code Institute
 
-This is README for my first Portfolio Project.
-
-Project 1 is to show what I have learnt during the first HTML and CSS course. The website has some basic information about motorcross and enduro. What's different between the two sports. Some info about me. The website will also contain a gallery with images related to the website's content.
+Rock, Paper, Scissors - The Game is constructed to show the use of my knowledge with JavaScript. Together with my skills in HTML and CSS. This is a god old classic game called Rock, Paper, Scissors. The basic is to use one of the elements in order to beat another. Where Rock always beat Scissors, Scissors always beat Paper, and Paper alwas beat Rock. In this game. A user can choose one of the options to play against the computer (the Robot). The Robot's choise is random using "Math.random()" in JavaScript.
 
 # <a id="table-of-content"></a>Table of Content
 
@@ -30,33 +28,31 @@ Project 1 is to show what I have learnt during the first HTML and CSS course. Th
 
 # <a id="demo"></a>Demo
 
-<img src="readmefiles/ami-website-mockups.png" width="50%" alt="Website shown in different devices."><br>
+<img src="readmefiles/amiresponsive.jpg" width="50%" alt="Website shown in different devices."><br>
 
-The live link can be found here - <a href="https://robertahlin.github.io/motocross-in-action/" target="_blank">https://robertahlin.github.io/motocross-in-action/</a>
+The live link can be found here - <a href="https://robertahlin.github.io/rps-project2b/" target="_blank">https://robertahlin.github.io/rps-project2b/</a>
 
-The site will be developed with the concept of "mobile first" to be able to fit small screens and then be responsive for bigger screens.
+The site will be developed to be responsive for different devices.
 
-The idea is to have one index.html and two sub pages. One with pictures and one with information about me as a rider and information about motocross and enduro riding.
+The idear for this project it to make a playable game against the computer. First there should be an landing page that will show a hero image about the game and that is also will containg intructions on how to play the game. And as every gamer always want to win there are an option to enter cheat code.
 
 # <a id="user-experience"></a>User Experience
 
-The main target of users for this website would be basically anybody interested in motorcrossm, enduro or follow me as a rider. The website will show content about the sports.
+The user of this website should be able to try out the concept of playing Rock, Paper, Scissors and practice it against a robot. The game here is just based on luck.
 
 ## <a id="user-stories"></a>User stories
 
-This is a quite personal website where anyone related to me or the sports of motocross and/or enduro riding. The site might act motivating for others. Hopefully it mig even bring more riders to the sport.
-A visitor the site should:
+A visitor to the site should:
 
 - Understand the purpose of this website quickly and easily.
-- Easily navigate this website (by using a mouse, a keyboard, or a touch screen).
-- Get an understanding of what motocross and enduro is all about.
-- Be able to read some information about what's the driffent is between the two sports.
-- Be able to find me on social media.
-- Be able to subscribe to a newsletter.
+- Easily navigate this website.
+- Play a game for fun.
+- Get an understanding the Rock, Paper, Scissors game.
+- Be able to enter cheat code to be always win.
 
 ### <a id="strategy"></a>Strategy
 
-The goal is to make a well-functioning interesting website. The focus was on making the design both user-friendly and creative.
+The goal is to make a well-functioning interesting website. The focus was on making the design a fun, user-friendly and creative site.
 
 ### <a id="scope"></a>Scope
 
@@ -141,13 +137,9 @@ Of course I want to add more things.
 
 ## <a id="testing"></a>Testing
 
-I first tested the code when the first structure was made.<br>
-![First test](readmefiles/first-test.jpg)<br>
-I got some info about "Trailing slash on void elements" but corrected it to get a nice ok.
+In contrast to the first project. I continuesly tested the code along to with coding to make sure everything is ok.
 
-When I felt that I was starting to be done. I tested all the code again.
-All the info about "Trailing slash on void elements" was back. And I noticed that Codeanywhere add this automatically when I copied and pasted code. So this time I decided just to filter that so it doesn't show everytime. I removed everything before submitting the project so I hope it doesn't appera again.
-I also got some warnings that I should add headers. Which I did with a class to hide it.
+Some things that come up is to add a header to each section in the html code. In order to 
 
 The CSS Validator gave me two errors. One that I had forgot to write a unit on a margin. And the second one was that I had typed "position; bottom;"
 which I changed to "position; fixed;".
