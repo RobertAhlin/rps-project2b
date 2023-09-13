@@ -63,8 +63,26 @@ hr {
     height: 100px;
 }
 
+.cheat-area {
+    position: fixed;
+    bottom: 50px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    box-shadow: 0 10px 10px #3a3a3a;
+    border-radius: 50px 10px;
+    width: 60%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #cheat-code {
     width: 60px;
+}
+#hero-image {
+    width: 80%;
 }
 
 /* Footer */
@@ -86,6 +104,7 @@ hr {
 .hidden-text {
     display: none;
 }
+
 /* Media query: for really narrow screens (480px and smaller) */
 @media screen and (max-width: 480px) {
     .font-style-upper {

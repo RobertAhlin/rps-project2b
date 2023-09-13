@@ -44,6 +44,7 @@ The user of this website should be able to try out the concept of playing Rock, 
 
 A visitor to the site should:
 
+- Get a wow-feeling on the landing page.
 - Understand the purpose of this website quickly and easily.
 - Easily navigate this website.
 - Play a game for fun.
@@ -98,13 +99,13 @@ Featured on all pages, the full responsive navigation bar should be centered wit
 The navigation links should always be visible to minimize the amount of clicking but also big enough to be able to use with a finger on a cell phone.
 This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the browser's ‘back’ button.
 
-The first basic structure looks like this:<br>
-![First structure.](readmefiles/structure.jpg)<br>
-This will be the main theme for all pages and will be added with contents.
+A really cool hero image:<br>
+<img src="assets/images/hero-image.png" width="50%" alt="Hero image on landing page"><br>
+Something eye catching on the page to make the visitor interested.
 
-I wanted my logo as a hero image:<br>
-![Robstar Racing logo](assets/images/robstar-racing-s.jpg)<br>
-Something eye catching on the page to make the visitor interested. The logo is hopefylly cool enough for this purpose.
+The first basic structure for the game looks like this:<br>
+![First structure.](readmefiles/first-layout.jpg)<br>
+This will be the main theme for all pages and will be added with contents.
 
 I really liked the idea of the footer from the Love Runing project. So I used that knowledge from that and made it fit my design.<br>
 ![Image of the footer](readmefiles/footer-image.jpg)<br>
@@ -179,6 +180,7 @@ After struggeling with it for some time I kind of started over with the whole we
 <li>For this project I want to credit the Google search engine. It's hard to remember how to write all codes.</li>
 <li>A lot of help comes from search hist at the "stack overflow" forums.</li>
 <li>Hand images of rock, paper and scissors from: <a href="https://www.pngaaa.com/detail/3313784" target="_blank">https://www.pngaaa.com/detail/3313784</a></li>
+<li>Image of explostion from <a href="https://www.vecteezy.com/png/9374808-fire-explode-png-design">https://www.vecteezy.com/png/9374808-fire-explode-png-design</a></li>
 </ul>
 
 Other that that:

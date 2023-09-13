@@ -6,18 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors - The Game</title>
+    <!-- Import css style sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header-style  font-style-upper">
         <h1>Rock, Paper, Scissors <br> The Game</h1>
     </header>
 
+    <!-- Main -->
     <main>
         <section class="game-area">
+            <!-- Score section -->
+            <div class="font-style-upper">Reset scores
+                <button id="reset-scores">Reset Scores</button><br>
+            </div>
             <div class="font-style-upper">
                 <div class="flex-style-space-around">
+                    
                     <div>
                         <h3>Player's points:</h3>
                         <span class="point-style" id="player-score">0</span>
@@ -29,6 +37,7 @@
                 </div>
             </div>    
             <hr>
+            <!-- Play area -->
             <div class="font-style-upper">
                 <h2>Choose your move:</h2>
                 <div class="flex-style-space-around" id="player-choices">
@@ -38,6 +47,8 @@
                 </div>
             </div>
             <hr>
+
+            <!-- Result section -->
             <div>
                 <div id="font-style-text">
                     <p id="choices"></p>
@@ -46,17 +57,23 @@
                 </div>
             </div>
         </section>
+
+        <!-- Cheat area -->
         <section>
-            <div class="font-style-upper game-area">
+            <div class="font-style-upper cheat-area">
                 <h1 class="hidden-text">Cheat code</h1>
-                <p>Enter code: <br> <input type="text" id="cheat-code"><br><span id="cheat-message"></span></p>
+                
             </div>
         </section>
     </main>
-    <footer class="footer-style">
-        <button id="reset-scores">Reset Scores</button>
-        <button id="reset-cheat">Reset Code</button>
+
+    <!-- Footer -->
+    <footer class="footer-style font-style-upper">
+        
+        <p>Enter code: <input type="text" id="cheat-code"> <button id="reset-cheat">Reset Code</button><br><span
+                id="cheat-message"></span></p>
     </footer>
+    <!-- Import JavaScript file. -->
     <script src="assets/js/script.js"></script>
 </body>
 
