@@ -14,36 +14,42 @@
         <h1>Rock, Paper, Scissors <br> The Game</h1>
     </header>
 
-    <main class="game-area">
-        <section class="font-style-upper">
-            <div class="flex-style-space-around">
-                <div>
-                    Player's points:<br><span id="player-score">0</span>
+    <main>
+        <section class="game-area">
+            <div class="font-style-upper">
+                <div class="flex-style-space-around">
+                    <div>
+                        <h3>Player's points:</h3>
+                        <span class="point-style" id="player-score">0</span>
+                    </div>
+                    <div>
+                        <h3>Robot's points:</h3>
+                        <span class="point-style" id="robot-score">0</span>
+                    </div>
                 </div>
-                <div>
-                    Robot's points:<br><span id="robot-score">0</span>
+            </div>    
+            <hr>
+            <div class="font-style-upper">
+                <h2>Choose your move:</h2>
+                <div class="flex-style-space-around" id="player-choices">
+                    <img src="assets/images/rock-hand.png" alt="Hand showing the sign for rock" id="rock">
+                    <img src="assets/images/paper-hand.png" alt="Hand showing the sign for paper" id="paper">
+                    <img src="assets/images/scissors-hand.png" alt="Hand showing the sign for scissors" id="scissors">
                 </div>
             </div>
-            
-        </section>
-        <hr width="80%">
-        <section class="font-style-upper">
-            <h2>Choose your move:</h2>
-            <div class="flex-style-space-around" id="player-choices">
-                <img src="assets/images/rock-hand.png" alt="Hand showing the sign for rock" id="rock">
-                <img src="assets/images/paper-hand.png" alt="Hand showing the sign for paper" id="paper">
-                <img src="assets/images/scissors-hand.png" alt="Hand showing the sign for scissors" id="scissors">
+            <hr>
+            <div>
+                <div id="font-style-text">
+                    <p id="choices"></p>
+                    <p id="result"></p>
+                    
+                </div>
             </div>
         </section>
-        <hr width="80%">
-        <div class="font-style-upper">
-            <p>Enter code: <br> <input type="text" id="cheat-code"><br><span id="cheat-message"></span></p>
-        </div>
         <section>
-            <div id="font-style-text">
-                <p id="choices"></p>
-                <p id="result"></p>
-                
+            <div class="font-style-upper game-area">
+                <h1 class="hidden-text">Cheat code</h1>
+                <p>Enter code: <br> <input type="text" id="cheat-code"><br><span id="cheat-message"></span></p>
             </div>
         </section>
     </main>

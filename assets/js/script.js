@@ -4,17 +4,17 @@ let cheatCodeActivated = false;
 let playerScore = 0;
 let robotScore = 0;
 
-// Function to update and display the player's score.
+// Update and display the player's score.
 function updatePlayerScore() {
     document.getElementById('player-score').textContent = playerScore;
 }
 
-// Function to update and display the robot's score.
+// Update and display the robot's score.
 function updateRobotScore() {
     document.getElementById('robot-score').textContent = robotScore;
 }
 
-// Function to reset the scores.
+// Reset the scores.
 function resetScores() {
     playerScore = 0;
     robotScore = 0;
@@ -22,12 +22,12 @@ function resetScores() {
     updateRobotScore();
 }
 
-// Function when player makes a choice.
+// When player makes a choice.
 function makePlayerChoice(choice) {
     playerChoice = choice;
     displayChoices(`You picked ${choice}`, "");
     displayMessage(""); // Clear the result message.
-    playGame(); // Start the game.
+    playGame();
 }
 
 // Event listeners for player's choice buttons.
@@ -35,10 +35,10 @@ document.getElementById('rock').addEventListener('click', () => makePlayerChoice
 document.getElementById('paper').addEventListener('click', () => makePlayerChoice('paper'));
 document.getElementById('scissors').addEventListener('click', () => makePlayerChoice('scissors'));
 
-// Function to generate robot's choice.
+// Generate robot's choice.
 function generateRobotChoice() {
     if (cheatCodeActivated) {
-        // When cheat mode is on, robot always selects a losing choice.
+        // When cheat mode is on, robot always select a losing choice.
         if (playerChoice === 'rock') {
             return 'scissors';
         } else if (playerChoice === 'paper') {
@@ -53,11 +53,11 @@ function generateRobotChoice() {
     }
 }
 
-// Function to figure out who wins and show the result.
+// Figure out who wins and show the result.
 function setWinner(playerChoice, robotChoice) {
     if (cheatCodeActivated) {
-        playerScore++; // Increase player's score on win.
-        updatePlayerScore(); // Update and display player's score.
+        playerScore++;
+        updatePlayerScore();
         return ' - You win! (You cheater...)';
     } else if (playerChoice === robotChoice) {
         return " - It's a tie!";
@@ -76,60 +76,54 @@ function setWinner(playerChoice, robotChoice) {
     }
 }
 
-// Function to show messages on the screen.
+// Show messages on the screen.
 function displayMessage(message) {
     document.getElementById('result').textContent = message;
 }
 
-// Function to show cheat code activated.
+// Show cheat code activated.
 function displayCheatMessage(cheatMessage) {
     document.getElementById('cheat-message').textContent = cheatMessage;
 }
 
-// Function to display player's and computer's choices.
+// Display player's and computer's choices.
 function displayChoices(player, robot) {
     let message = `${player} ${robot}`;
     document.getElementById('choices').textContent = message;
 }
 
-// Function to start the game.
+// Play the game.
 function playGame() {
-    if (playerChoice === null) {
-        displayMessage('Pick a move first!');
-        return;
-    }
-    // Delay hiding the message for 2 seconds.
+    // Delay showing robot choise for 1 second.
     setTimeout(() => {
         robotChoice = generateRobotChoice();
         displayChoices(`You played ${playerChoice}`, ` vs. Robot played ${robotChoice}`);
         let result = setWinner(playerChoice, robotChoice);
         displayMessage(result);
-    }, 2000);
-    
-    
+    }, 1000);
 }
 
-// When player types a cheat code.
+// Activate cheat code.
 document.getElementById('cheat-code').addEventListener('input', function (event) {
     if (event.target.value.toLowerCase() === 'godmode') {
         cheatCodeActivated = true;
         displayCheatMessage(' Activated!');
     } else {
-        cheatCodeActivated = false; // Disable cheat mode if the code is not 'godmode'.
+        cheatCodeActivated = false;
         displayCheatMessage(''); // Clear cheat message.
     }
 });
 
-// Function to reset the cheat code.
+// Reset the cheat code.
 function resetCheatCode() {
     cheatCodeActivated = false;
     document.getElementById('cheat-code').value = '';
     displayCheatMessage(' Cheat code reset.');
 
-    // Delay hiding the message for 5 seconds.
+    // Delay hiding "cheat code reset" message for 3 seconds.
     setTimeout(() => {
         document.getElementById('cheat-message').textContent = '';
-    }, 5000);
+    }, 3000);
 }
 
 // For "Reset Cheat" button.

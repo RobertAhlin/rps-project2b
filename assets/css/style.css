@@ -5,6 +5,9 @@ body {
     background-color: burlywood;
     text-align: center;
 }
+hr {
+    width: 80%;
+}
 
 .font-style-upper {
     font-family: 'Londrina Solid', cursive;
@@ -52,6 +55,10 @@ body {
     justify-content: space-around;
 }
 
+.point-style {
+    font-size: 200%;
+}
+
 #player-choices img {
     height: 100px;
 }
@@ -76,6 +83,9 @@ body {
     padding-bottom: 10px;
 }
 
+.hidden-text {
+    display: none;
+}
 /* Media query: for really narrow screens (480px and smaller) */
 @media screen and (max-width: 480px) {
     .font-style-upper {
