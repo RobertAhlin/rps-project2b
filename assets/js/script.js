@@ -17,12 +17,6 @@ image.addEventListener('mouseup', () => {
     image.src = 'assets/images/btn-reset-scores.jpg'; // Replace with your image path
 });
 
-// Toggle div on index page
-document.getElementById('toggle-div').addEventListener('click', function () {
-    var overlayDiv = document.getElementById('overlay-div');
-    overlayDiv.classList.toggle('hidden-div');
-});
-
 // Update and display the player's score.
 function updatePlayerScore() {
     document.getElementById('player-score').textContent = playerScore;
