@@ -76,72 +76,66 @@ The website is designed to be clear and simple. And the site has a simple tree s
 
 **Wireframe**
 
-I started to draw couple of quick designs in paper. And this is the one I liked the most.
-<img src="readmefiles/idea.jpg" width="25%" alt="First idea drawn on paper.">
+For this project I tried the Balsamic to scetch a layot.<br>
+<img src="readmefiles/balsamic-idea.jpg" width="40%" alt="First idea done in Balsamic.">
 
 The basic idea is to have it simple with some small 3d effects.<br>
+I liked the theme I had in my first project with the rounded corners with different areas.
 
 ### <a id="surface"></a>Surface
 
-First I though of a light blue background. But later I decided for a light yellow because I wanted to get it fell like sand. Because my favourite motocross tracks have a basis of sand.
-So I went for rgb(255, 245, 191) that is easy to have behind text and it somewhat reminds me of sand. On top of that I wanted the feeling of some hovering boxes. I thought it felt quite boring with just sharp square boxes. So I went for a shaoe that I used like 20 years ago in a side business I had back in time.
+I was first thinking of to have a background color as the shade of a human skin. But as the skin can really vary in color I decided for "burlywood" after been trying out a couple of colors.
+I wanted the page to feel warm and light. So the combination of the burlywood color and the white "clouds" I think I achieved that.
 
 ## <a id="technologies"></a>Technologies
 
 1. HTML - To create a basic site
 2. CSS - To create a nice, standout front-end with a feel of 3d and shading.
+3. JavaScript to hande all the mechanics.
 
 ## <a id="features"></a>Features
 
 Existing Features
 Navigation Bar
 
-Featured on all pages, the full responsive navigation bar should be centered with equal space between to follow the different sceen widths. Three links to Home, an image libaray and to an about page. This should look the same on all pages.
-The navigation links should always be visible to minimize the amount of clicking but also big enough to be able to use with a finger on a cell phone.
-This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the browser's ‘back’ button.
+There is a small navbar on the index page. I didn't want another page for the instructions so I made a hidden div that toggles hidden and shown when clicking the Intructions link.
 
 A really cool hero image:<br>
 <img src="assets/images/hero-image.png" width="50%" alt="Hero image on landing page"><br>
 Something eye catching on the page to make the visitor interested.
+I  used some easy skills in Photoshop to make the image.
 
 The first basic structure for the game looks like this:<br>
 ![First structure.](readmefiles/first-layout.jpg)<br>
 This will be the main theme for all pages and will be added with contents.
 
-I really liked the idea of the footer from the Love Runing project. So I used that knowledge from that and made it fit my design.<br>
-![Image of the footer](readmefiles/footer-image.jpg)<br>
-This will ensure that the visitor can find other media quick and easy if they wish to get more information or wants to follow me in any social media.
-I made the links work to my Facebook page, YouTube and Instagram. I made them open in new windows. But beware, the pages are in Swedish.
+My design theme fits well to use a footer. In the footer I placed the ability to enter code.<br>
+![Image of the footer](readmefiles/footer.jpg)<br>
+It feel like a good place to have the cheat code area. It doesn't intefere with the game design but still it available.
 
-Also the gallery idea from the Love running project was a nice feature. Especially the feature that made the image sort up in more columns
-the wider the screen gets. This gives a great view over the images and works good on any screen with.
-![Example of some images from the image page](readmefiles/images-image.jpg)
-
-In the about page I wanted the visitor to be able to read some about me and what's the different between motocross and enduro.
-I can write a lot about but I think the content is enough for now.
+The game area. I wanted it to be simple. At first I acually made it possible to first choose what move to play and then click a Play button to start. But after dicussion with my mentor I changed it, so the game starts as soon as the player click a hand. And then a one second wait timer to simulate that the robot is thinking.The score will count to ten to determen the winner. Then the game has to be restarted by clicking the reset score button.<br>
+![Example of some images from the image page](readmefiles/game-area.jpg)
 
 ## <a id="finalising"></a>Finalising
 
-Finally after some time I started to feel satisfied with a good site:<br>
-
-![Final design of index page](readmefiles/index-view.jpg)![Final design of image page](readmefiles/image-view.jpg)![Final design of about page](readmefiles/about-view.jpg)<br>
-This is the view from a Samsung Galaxy S8+, but I've been working a lot with different sceeen sizes and in responsive mode to confirm that it will work on
-all devices.
+<img src="readmefiles/index-image.jpg" width="50%" alt="Image of the landing page."><br>
+<img src="readmefiles/gamepage-image.jpg" width="50%" alt="Image of the game page."><br>
+I've been using the responive layout a lot in inspect mode using Google Chrome.
 
 ## <a id ="more-features"></a>More Features?
 
-Of course I want to add more things.
+A couple of things is in my mind.
 <ul>
-<li> One image gallery so it will be one for motocross and one for enduro.</li>
-<li> Thinking of adding a page only for videos</li>
-<li> I was looking for a way to make the images clickable to view them on 100% width. But I didn't find anything that was working good enough to my liking. After spending a couple of hour on it, I decided to skip it for now and look for a solution later.</li>
+<li> The ability to go to next level if you win a round of ten points. Just for fun. The game can't be "harder" on a higher lever. :-D</li>
+<li> Adding more codes for different features.</li>
+<li> Add a "back button" on the game page to go back to landing page.</li>
 </ul>
 
 ## <a id="testing"></a>Testing
 
 In contrast to the first project. I continuesly tested the code along to with coding to make sure everything is ok.
 
-Some things that come up is to add a header to each section in the html code. In order to 
+Some things that come up is to add a header to each section in the html code. But I later changed the sections and just had one header added.
 
 The CSS Validator gave me two errors. One that I had forgot to write a unit on a margin. And the second one was that I had typed "position; bottom;"
 which I changed to "position; fixed;".
@@ -149,8 +143,7 @@ which I changed to "position; fixed;".
 Links to the validation
 <ul>
 <li> HTML of <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Frobertahlin.github.io%2Fmotocross-in-action%2Findex.html" target="_blank">index</a> page.</li>
-<li> HTML of <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Frobertahlin.github.io%2Fmotocross-in-action%2Fimages.html" target="_blank">images</a> page.</li>
-<li> HTML of <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Frobertahlin.github.io%2Fmotocross-in-action%2Fabout.html" target="_blank">about</a> page.</li>
+<li> HTML of <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Frobertahlin.github.io%2Fmotocross-in-action%2Fimages.html" target="_blank">game</a> page.</li>
 <li> CSS of <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frobertahlin.github.io%2Fmotocross-in-action%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">style.css</a>.</li>
 </ul>
 
