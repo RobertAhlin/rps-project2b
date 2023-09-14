@@ -1,13 +1,8 @@
 let playerChoice = null;
-let computerChoice = null;
+let robotChoice = null;
 let cheatCodeActivated = false;
 let playerScore = 0;
 let robotScore = 0;
-
-document.getElementById('toggle-div').addEventListener('click', function () {
-    var overlayDiv = document.getElementById('overlay-div');
-    overlayDiv.classList.toggle('hidden-div');
-});
 
 // Update and display the player's score.
 function updatePlayerScore() {
@@ -170,3 +165,9 @@ document.getElementById('reset-cheat').addEventListener('click', resetCheatCode)
 
 // For "Reset Scores" button.
 document.getElementById('reset-scores').addEventListener('click', resetScores);
+
+// Toggle div on index page
+document.getElementById('toggle-div').addEventListener('click', function () {
+    var overlayDiv = document.getElementById('overlay-div');
+    overlayDiv.classList.toggle('hidden-div');
+});
