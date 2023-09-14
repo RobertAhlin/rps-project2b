@@ -159,7 +159,7 @@ Also my mentor have tested the website.
 ### <a id="bugs"></a>Bugs?
 
 <ul>
-<li>The is something with the "swap image function" when clicking the "Reset scores" button. Sometimes it doesn't swap to the "down button image". After hard refreshing the page a couple of times it works. Sometimes it works when holding down the mouse button for a while.</li>
+<li>The is something with the "swap image function" when clicking the "Reset scores" button. Sometimes it doesn't swap to the "down button image". After hard refreshing the page a couple of times it works. Sometimes it works when holding down the mouse button for a while. It also seems to work better in Microsoft Edge.</li>
 <li>Also the swap image function doesn't seem to respond when in inspect mode in Google Chrome.
 <li>The toggle of div containing the intructions on the index page don't work when the script is in the script.js file. I had to place it in another file called index-script.js. I disovered that if I placed it first in the script.js document it worked, but then the swap image effect on the "Reset Score" button stopped working completely. I coun't figure out why. So the solutions was to have them in different files.</li>
 </ul>
