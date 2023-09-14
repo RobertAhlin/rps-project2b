@@ -22,6 +22,19 @@ function resetScores() {
     updateRobotScore();
 }
 
+const image = document.getElementById('btn-effect');
+
+image.addEventListener('mousedown', () => {
+    // Change the image source on click down
+    image.src = 'image2.jpg'; // Replace 'image2.jpg' with the path to your second image
+});
+
+image.addEventListener('mouseup', () => {
+    // Change the image source back on mouse release
+    image.src = 'image1.jpg'; // Replace 'image1.jpg' with the path to your first image
+});
+
+
 // When player makes a choice.
 function makePlayerChoice(choice) {
     playerChoice = choice;

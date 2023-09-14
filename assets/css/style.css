@@ -67,7 +67,6 @@ hr {
 .cheat-area {
     position: fixed;
     bottom: 50px;
-    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
@@ -83,14 +82,13 @@ hr {
     width: 60px;
 }
 #hero-image {
-    width: 80%;
+    width: 70%;
 }
 
 /* Footer */
 .footer-style {
     position: fixed;
     bottom: 5px;
-    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
@@ -100,10 +98,6 @@ hr {
     margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-#index-footer-margin {
-    margin-bottom: 100px;
 }
 
 .hidden-text {
