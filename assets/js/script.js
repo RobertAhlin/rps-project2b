@@ -14,24 +14,26 @@ function updateRobotScore() {
     document.getElementById('robot-score').textContent = robotScore;
 }
 
-// Reset the scores.
+// Reset the scores and messages.
 function resetScores() {
     playerScore = 0;
     robotScore = 0;
     updatePlayerScore();
     updateRobotScore();
+    displayMessage('');
 }
 
-const image = document.getElementById('btn-effect');
+// Swap image for button effect 
+const image = document.getElementById('reset-scores');
 
 image.addEventListener('mousedown', () => {
     // Change the image source on click down
-    image.src = 'image2.jpg'; // Replace 'image2.jpg' with the path to your second image
+    image.src = 'assets/images/btn-reset-scores-down.jpg';
 });
 
 image.addEventListener('mouseup', () => {
     // Change the image source back on mouse release
-    image.src = 'image1.jpg'; // Replace 'image1.jpg' with the path to your first image
+    image.src = 'assets/images/btn-reset-scores.jpg';
 });
 
 
@@ -81,11 +83,21 @@ function setWinner(playerChoice, robotChoice) {
     ) {
         playerScore++; // Increase player's score on win.
         updatePlayerScore(); // Update and display player's score.
-        return ` - You win!`;
+        if (playerScore >= 2) { // Check if reached ten point.
+            return 'Congratulations! You where first to 10 points. You win the game! - Reset scores or continue.';
+        } else {
+            return ` - You win!`;
+        }
+        
     } else {
         robotScore++; // Increase robot's score on win.
         updateRobotScore(); // Update and display robot's score.
-        return '- Robot wins!';
+        if (robotScore >= 2) { // Check if reached ten point.
+            return 'Sorry, robot was first to 10 points. The robot wins the game. - Reset scores or continue.';
+        } else {
+            return '- Robot wins!';
+        }
+        
     }
 }
 
@@ -107,13 +119,18 @@ function displayChoices(player, robot) {
 
 // Play the game.
 function playGame() {
-    // Delay showing robot choise for 1 second.
-    setTimeout(() => {
-        robotChoice = generateRobotChoice();
-        displayChoices(`You played ${playerChoice}`, ` vs. Robot played ${robotChoice}`);
-        let result = setWinner(playerChoice, robotChoice);
-        displayMessage(result);
-    }, 1000);
+    if (robotScore >= 2 and playerScore >= 2) { // Check if game over.
+        return 'The game is over!';
+    } else {
+        // Delay showing robot choise for 1 second.
+        setTimeout(() => {
+            robotChoice = generateRobotChoice();
+            displayChoices(`You played ${playerChoice}`, ` vs. Robot played ${robotChoice}`);
+            let result = setWinner(playerChoice, robotChoice);
+            displayMessage(result);
+        }, 1000);
+    }
+    
 }
 
 // Activate cheat code.
