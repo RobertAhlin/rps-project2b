@@ -21,6 +21,7 @@ function resetScores() {
     updatePlayerScore();
     updateRobotScore();
     displayMessage('');
+    displayChoices('', '');
 }
 
 // Swap image for button effect 
@@ -73,7 +74,11 @@ function setWinner(playerChoice, robotChoice) {
     if (cheatCodeActivated) {
         playerScore++;
         updatePlayerScore();
-        return ' - You win! (You cheater...)';
+        if (playerScore >= 10) { // Check if reached ten point.
+            return 'Congratulations! You succefully cheated your way to 10 points. You win! - Reset scores to play again.';
+        } else {
+            return ' - You win! (You cheater...)';
+        }      
     } else if (playerChoice === robotChoice) {
         return " - It's a tie!";
     } else if (
@@ -83,7 +88,7 @@ function setWinner(playerChoice, robotChoice) {
     ) {
         playerScore++; // Increase player's score on win.
         updatePlayerScore(); // Update and display player's score.
-        if (playerScore >= 2) { // Check if reached ten point.
+        if (playerScore >= 10) { // Check if reached ten point.
             return 'Congratulations! You where first to 10 points. You win the game! - Reset scores or continue.';
         } else {
             return ` - You win!`;
@@ -92,7 +97,7 @@ function setWinner(playerChoice, robotChoice) {
     } else {
         robotScore++; // Increase robot's score on win.
         updateRobotScore(); // Update and display robot's score.
-        if (robotScore >= 2) { // Check if reached ten point.
+        if (robotScore >= 10) { // Check if reached ten point.
             return 'Sorry, robot was first to 10 points. The robot wins the game. - Reset scores or continue.';
         } else {
             return '- Robot wins!';
@@ -119,10 +124,10 @@ function displayChoices(player, robot) {
 
 // Play the game.
 function playGame() {
-    if (robotScore >= 2 and playerScore >= 2) { // Check if game over.
-        return 'The game is over!';
+    if (robotScore >= 10 || playerScore >= 10) { // Check if game over.
+        displayChoices('Game over!', ' - Reset scores to play again.'); // Exit the function if game over.
     } else {
-        // Delay showing robot choise for 1 second.
+        // Delay showing robot choice for 1 second.
         setTimeout(() => {
             robotChoice = generateRobotChoice();
             displayChoices(`You played ${playerChoice}`, ` vs. Robot played ${robotChoice}`);
@@ -130,7 +135,6 @@ function playGame() {
             displayMessage(result);
         }, 1000);
     }
-    
 }
 
 // Activate cheat code.
