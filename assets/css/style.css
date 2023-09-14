@@ -1,11 +1,17 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Londrina+Solid&family=Permanent+Marker&display=swap');
 
+/* "global" styles */
 body {
     background-color: burlywood;
     text-align: center;
     font-family: 'Londrina Solid', cursive;
     letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 hr {
@@ -66,6 +72,11 @@ hr {
     margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.nav-style {
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 /* Game area */

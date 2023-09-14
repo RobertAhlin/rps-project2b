@@ -2,7 +2,7 @@
 
 ## Second project at Code Institute
 
-Rock, Paper, Scissors - The Game is constructed to show the use of my knowledge with JavaScript. Together with my skills in HTML and CSS. This is a god old classic game called Rock, Paper, Scissors. The basic is to use one of the elements in order to beat another. Where Rock always beat Scissors, Scissors always beat Paper, and Paper alwas beat Rock. In this game. A user can choose one of the options to play against the computer (the Robot). The Robot's choise is random using "Math.random()" in JavaScript.
+Rock, Paper, Scissors - The Game is constructed to show the use of my knowledge with JavaScript. Together with my skills in HTML and CSS. This is a god old classic game called Rock, Paper, Scissors. The basics is to use one of the elements in order to beat another. Where Rock always beat Scissors, Scissors always beat Paper, and Paper alwas beat Rock. In this game. A user can choose one of the options to play against the computer (the Robot). The Robot's choise is random using "Math.random()" in JavaScript.
 
 # <a id="table-of-content"></a>Table of Content
 
@@ -32,9 +32,9 @@ Rock, Paper, Scissors - The Game is constructed to show the use of my knowledge 
 
 The live link can be found here - <a href="https://robertahlin.github.io/rps-project2b/" target="_blank">https://robertahlin.github.io/rps-project2b/</a>
 
-The site will be developed to be responsive for different devices.
+The site is developed to be responsive for different devices.
 
-The idea for this project it to make a playable game against the computer. First there should be an landing page that will show a hero image about the game and that is also will containg intructions on how to play the game. And as every gamer always want to win there are an option to enter cheat code.
+The idea for this project it to make a playable game against the computer. First there should be an landing page that will show a hero image about the game and it will also contain intructions on how to play the game. And as every gamer always want to win there are an option to enter cheat code.
 
 Use "godmode" as code to try it out.
 
@@ -140,7 +140,8 @@ Some things that come up is to add a header to each section in the html code. Bu
 The CSS Validator gave me two errors. One that I had forgot to write a unit on a margin. And the second one was that I had typed "position; bottom;"
 which I changed to "position; fixed;".
 
-I aslo used Lighthouse in Chrome to find ways to increase the accessibility of the website.
+I aslo used Lighthouse in Chrome to find ways to increase the accessibility of the website.<br>
+<img src="readmefiles/lighthouse.jpg" alt="Gauges of the Lighthose measuering"><br>
 
 Links to the validation
 <ul>
@@ -178,7 +179,8 @@ Also my mentor have tested the website.
 
 <ul>
 <li>For this project I want to credit the Google search engine. It's hard to remember how to write all codes.</li>
-<li>A lot of help comes from search hist at the "stack overflow" forums.</li>
+<li>A lot of help comes from search hits at the "stack overflow" forums.</li>
+<li>Ideas and some code from my previous project <a href="https://robertahlin.github.io/motocross-in-action/" target="_blank">Motocross in action</a>.</li>
 <li>Hand images of rock, paper and scissors from: <a href="https://www.pngaaa.com/detail/3313784" target="_blank">https://www.pngaaa.com/detail/3313784</a></li>
 <li>Image of explostion from <a href="https://www.vecteezy.com/png/9374808-fire-explode-png-design">https://www.vecteezy.com/png/9374808-fire-explode-png-design</a></li>
 </ul>
@@ -189,6 +191,4 @@ All the text are authored by me.
 
 ### <a id="acknoledgements"></a>Acknowledgements
 
-- Ideas were taken from the Code Institute's Love Running project.
-- The the Code Institute Student Care for helping me postpone my project deadline, due to a family member passed away just when I was about to start, my project. And I had just set my life on hold a couple of days.
-- My mentor, Medale Oluwafemi, for hes great suggestions and quick help.
+- My mentor, Medale Oluwafemi, for great suggestions and help.
