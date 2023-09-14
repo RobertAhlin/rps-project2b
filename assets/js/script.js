@@ -24,20 +24,6 @@ function resetScores() {
     displayChoices('', '');
 }
 
-// Swap image for button effect 
-const image = document.getElementById('reset-scores');
-
-image.addEventListener('mousedown', () => {
-    // Change the image source on click down
-    image.src = 'assets/images/btn-reset-scores-down.jpg';
-});
-
-image.addEventListener('mouseup', () => {
-    // Change the image source back on mouse release
-    image.src = 'assets/images/btn-reset-scores.jpg';
-});
-
-
 // When player makes a choice.
 function makePlayerChoice(choice) {
     playerChoice = choice;
@@ -159,6 +145,19 @@ function resetCheatCode() {
         document.getElementById('cheat-message').textContent = '';
     }, 3000);
 }
+
+// Swap image for button effect.
+const image = document.getElementById('reset-scores');
+
+image.addEventListener('mousedown', () => {
+    // Change the image source on click down
+    image.src = 'assets/images/btn-reset-scores-down.jpg'; // Replace with your image path
+});
+
+image.addEventListener('mouseup', () => {
+    // Change the image source back on mouse release
+    image.src = 'assets/images/btn-reset-scores.jpg'; // Replace with your image path
+});
 
 // For "Reset Cheat" button.
 document.getElementById('reset-cheat').addEventListener('click', resetCheatCode);

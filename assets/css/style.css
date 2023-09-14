@@ -11,6 +11,7 @@ body {
 hr {
     width: 80%;
 }
+
 /* Div to show intructions for game on index page */
 #container {
     position: relative;
@@ -92,6 +93,7 @@ hr {
     height: 100px;
 }
 
+/* Cheat code area */
 .cheat-area {
     position: fixed;
     bottom: 50px;
