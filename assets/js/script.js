@@ -4,19 +4,6 @@ let cheatCodeActivated = false;
 let playerScore = 0;
 let robotScore = 0;
 
-// Swap image for button effect.
-const image = document.getElementById('reset-scores');
-
-image.addEventListener('mousedown', () => {
-    // Change the image source on click down
-    image.src = 'assets/images/btn-reset-scores-down.jpg'; // Replace with your image path
-});
-
-image.addEventListener('mouseup', () => {
-    // Change the image source back on mouse release
-    image.src = 'assets/images/btn-reset-scores.jpg'; // Replace with your image path
-});
-
 // Update and display the player's score.
 function updatePlayerScore() {
     document.getElementById('player-score').textContent = playerScore;
@@ -44,11 +31,6 @@ function makePlayerChoice(choice) {
     displayMessage(""); // Clear the result message.
     playGame();
 }
-
-// Event listeners for player's choice buttons.
-document.getElementById('rock').addEventListener('click', () => makePlayerChoice('rock'));
-document.getElementById('paper').addEventListener('click', () => makePlayerChoice('paper'));
-document.getElementById('scissors').addEventListener('click', () => makePlayerChoice('scissors'));
 
 // Generate robot's choice.
 function generateRobotChoice() {
@@ -88,7 +70,7 @@ function setWinner(playerChoice, robotChoice) {
         playerScore++; // Increase player's score on win.
         updatePlayerScore(); // Update and display player's score.
         if (playerScore >= 10) { // Check if reached ten point.
-            return 'Congratulations! You where first to 10 points. You win the game! - Reset scores or continue.';
+            return 'Congratulations! You where first to 10 points. You win the game! - Reset scores to play again.';
         } else {
             return ` - You win!`;
         }
@@ -97,7 +79,7 @@ function setWinner(playerChoice, robotChoice) {
         robotScore++; // Increase robot's score on win.
         updateRobotScore(); // Update and display robot's score.
         if (robotScore >= 10) { // Check if reached ten point.
-            return 'Sorry, robot was first to 10 points. The robot wins the game. - Reset scores or continue.';
+            return 'Sorry, robot was first to 10 points. The robot wins the game. - Reset scores to play again..';
         } else {
             return '- Robot wins!';
         }
@@ -158,6 +140,24 @@ function resetCheatCode() {
         document.getElementById('cheat-message').textContent = '';
     }, 3000);
 }
+
+// Event listeners for player's choice buttons.
+document.getElementById('rock').addEventListener('click', () => makePlayerChoice('rock'));
+document.getElementById('paper').addEventListener('click', () => makePlayerChoice('paper'));
+document.getElementById('scissors').addEventListener('click', () => makePlayerChoice('scissors'));
+
+// Swap image for button effect.
+const image = document.getElementById('reset-scores');
+
+image.addEventListener('mousedown', () => {
+    // Change the image source on click down
+    image.src = 'assets/images/btn-reset-scores-down.jpg';
+});
+
+image.addEventListener('mouseup', () => {
+    // Change the image source back on mouse release
+    image.src = 'assets/images/btn-reset-scores.jpg';
+});
 
 // For "Reset Cheat" button.
 document.getElementById('reset-cheat').addEventListener('click', resetCheatCode);
