@@ -140,12 +140,14 @@ Some things that come up is to add a header to each section in the html code. Bu
 The CSS Validator gave me two errors. One that I had forgot to write a unit on a margin. And the second one was that I had typed "position; bottom;"
 which I changed to "position; fixed;".
 
+I aslo used Lighthouse in Chrome to find ways to increase the accessibility of the website.
+
 Links to the validation
 <ul>
 <li> HTML of <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Frobertahlin.github.io%2Frps-project2b%2Findex.html" target="_blank">index</a> page.</li>
 <li> HTML of <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Frobertahlin.github.io%2Frps-project2b%2Fgame.html" target="_blank">game</a> page.</li>
 <li> CSS of <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frobertahlin.github.io%2Frps-project2b%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">style.css</a>.</li>
-<li> JavaScript of  <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frobertahlin.github.io%2Frps-project2b%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" target="_blank">index-script.css</a>.</li>
+<li> To validate my JavaScript I  used <a href="https://jshint.com/" target="_blank">https://jshint.com/</a>. (Coudn't find a way to post links.)</li>
 </ul>
 
 Other than the validators. I've been using the Inspect view in Google Crome using different layout for different devices and a lot with the responsive layout.
@@ -156,8 +158,9 @@ Also my mentor have tested the website.
 ### <a id="bugs"></a>Bugs?
 
 <ul>
-<li>The is something with the "swap image function" when clicking the "Reset scores" button. Sometimes it doesn't swap to the "down button image". After hard refreshing the page a couple of times it works.</li>
-<li>The toggle of div conatining the intructions on the index page don't work when the script is in the script.js file. I had to place it in another file called index.script.js. I disovered that if I placed it first in the script.js document it worked, but then the swap image effect on the "Reset Score" button stopped working komlpetely. I coun't figure out why. So the solutions was to have them in different files.</li>
+<li>The is something with the "swap image function" when clicking the "Reset scores" button. Sometimes it doesn't swap to the "down button image". After hard refreshing the page a couple of times it works. Sometimes it works when holding down the mouse button for a while.</li>
+<li>Also the swap image function doesn't seem to respond when in inspect mode in Google Chrome.
+<li>The toggle of div containing the intructions on the index page don't work when the script is in the script.js file. I had to place it in another file called index-script.js. I disovered that if I placed it first in the script.js document it worked, but then the swap image effect on the "Reset Score" button stopped working completely. I coun't figure out why. So the solutions was to have them in different files.</li>
 </ul>
 
 ## <a id="deployment"></a>Deployment
@@ -165,9 +168,9 @@ Also my mentor have tested the website.
 <ul>
 <li>The site was deployed to GitHub pages. The steps to deploy are as follows:</li>
 <ul>
-<li>In the GitHub repository, navigate to the Settings tab</li>
-<li>From the source section drop-down menu, select the Master Branch</li>
-<li>Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.</li>
+<li>In the GitHub repository.I navigated to the Settings tab</li>
+<li>From the source section drop-down menu, I selected the Master Branch</li>
+<li>Once the master branch was selected and saved, I hade to go out from the page and back in in order to load the link.</li>
 </ul>
 </ul>
 
