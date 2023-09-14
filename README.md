@@ -34,7 +34,9 @@ The live link can be found here - <a href="https://robertahlin.github.io/rps-pro
 
 The site will be developed to be responsive for different devices.
 
-The idear for this project it to make a playable game against the computer. First there should be an landing page that will show a hero image about the game and that is also will containg intructions on how to play the game. And as every gamer always want to win there are an option to enter cheat code.
+The idea for this project it to make a playable game against the computer. First there should be an landing page that will show a hero image about the game and that is also will containg intructions on how to play the game. And as every gamer always want to win there are an option to enter cheat code.
+
+Use "godmode" as code to try it out.
 
 # <a id="user-experience"></a>User Experience
 
@@ -46,10 +48,10 @@ A visitor to the site should:
 
 - Get a wow-feeling on the landing page.
 - Understand the purpose of this website quickly and easily.
-- Easily navigate this website.
+- Easily navigate the website.
 - Play a game for fun.
 - Get an understanding the Rock, Paper, Scissors game.
-- Be able to enter cheat code to be always win.
+- Be able to enter cheat code to be to always win.
 
 ### <a id="strategy"></a>Strategy
 
@@ -57,17 +59,16 @@ The goal is to make a well-functioning interesting website. The focus was on mak
 
 ### <a id="scope"></a>Scope
 
-For the users that are interested in motocross and enduro. I want the site be informative. Somewhat educational but mostly be ablse to find information about me as rider. Content of images and videos will keep the visitor interested.
+For the purpose to show my knowledge in JavaScript, as well as doing something fun. And aslo something different and think outside the box with the possibility to enter cheat codes.
 
 ### <a id="structure"></a>Structure
 
-I aimed for a simple website that should contain as little clicks as possible. Also as litte scrolling as possible. Even though it's quite easy to scroll up and down on a cell phone is still wanted it to be possible to get a quick overview of each page. If the visitor want to see more about me. I've provided easy accesed links to external social media platforms, such a Facebook, YouTube and instragram in the foooter.
+I aimed for a simple website that should contain as little clicks as possible. Also as litte scrolling as possible. Even though it's quite easy to scroll up and down on a cell phone is still wanted it to be possible to get a quick overview of each page. I wanted to minimize the usage of Media Querys and have a responsive site with using of precent on widths etc.
 
 **Website:**
 
-1. **_Home / Index page:_** A logo for Robstar Racing and a video to catch interest for the user.
-2. **_Images:_** Be able to view images of different events in the sports.
-3. **_About:_** Information page about me and about motocross and enduro. As well as a form to subscribe to a newsletter.
+1. **_Home / Index page:_** Landing page with a hero image. Link to play page and some intructions included.
+2. **_Game:_** The game area with clickable images to play.
 
 ### <a id="skeleton"></a>Skeleton
 
@@ -160,8 +161,10 @@ Also my mentor have tested the website.
 
 ### <a id="bugs"></a>Bugs?
 
-Yes, when using different screen sizes and espicially the responsive view in the browser. The "header", "main" and "footer" section doesn't line to the right margin of the view. It looks good on a mobile, but the wider screen is, the worse it looks. I have tried with various widths, margins and paddings without success. I tried to search the internet without any help. The last thing I noticed was that it seems to be affected by the "z-index" value. The higher value the more close it is to the right edge. Couln't solve it or even if might not be able to solve? Is that the purpose of "z-index"?
-After struggeling with it for some time I kind of started over with the whole website and "cleaned" the code from start and tried to see when the effect occured. Finally I found a solution for it.
+<ul>
+<li>The is something with the "swap image function" when clicking the "Reset scores" button. Sometimes it doesn't swap to the "down button image". After hard refreshing the page a couple of times it works.</li>
+<li>The toggle of div conatining the intructions on the index page don't work when the script is in the script.js file. I had to place it in another file called index.script.js. I disovered that if I placed it first in the script.js document it worked, but then the swap image effect on the "Reset Score" button stopped working komlpetely. I coun't figure out why. So the solutions was to have them in different files.</li>
+</ul>
 
 ## <a id="deployment"></a>Deployment
 

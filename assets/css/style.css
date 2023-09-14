@@ -20,11 +20,11 @@ hr {
 
 #overlay-div {
     position: absolute;
-    position: absolute;
+    width: 60%;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 10px 10px #3a3a3a;
     border-radius: 50px 10px;
     padding: 10px;
@@ -35,6 +35,7 @@ hr {
     display: none;
 }
 
+/* Text styles */
 .font-style-upper {
     font-family: 'Londrina Solid', cursive;
     text-transform: uppercase;
@@ -50,6 +51,10 @@ hr {
 
 .text-align-left {
     text-align: left;
+}
+
+.hidden-text {
+    display: none;
 }
 
 /* Header */
@@ -111,6 +116,7 @@ hr {
 #cheat-code {
     width: 60px;
 }
+/* Hero image on index page. */
 #hero-image {
     width: 70%;
 }
@@ -128,10 +134,6 @@ hr {
     margin: auto;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.hidden-text {
-    display: none;
 }
 
 /* Media query: for really narrow screens (480px and smaller) */
