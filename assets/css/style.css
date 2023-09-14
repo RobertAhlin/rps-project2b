@@ -4,10 +4,34 @@
 body {
     background-color: burlywood;
     text-align: center;
+    font-family: 'Londrina Solid', cursive;
+    letter-spacing: 1px;
 }
 
 hr {
     width: 80%;
+}
+/* Div to show intructions for game on index page */
+#container {
+    position: relative;
+    display: inline-block;
+}
+
+#overlay-div {
+    position: absolute;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 10px #3a3a3a;
+    border-radius: 50px 10px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.hidden-div {
+    display: none;
 }
 
 .font-style-upper {
@@ -21,6 +45,10 @@ hr {
     font-family: 'Londrina Solid', cursive;
     letter-spacing: 1px;
     text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
 }
 
 /* Header */
