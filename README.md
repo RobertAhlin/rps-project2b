@@ -34,7 +34,7 @@ The live link can be found here - <a href="https://robertahlin.github.io/rps-pro
 
 The site is developed to be responsive for different devices.
 
-The idea for this project it to make a playable game against the computer. First there should be an landing page that will show a hero image about the game and it will also contain intructions on how to play the game. And as every gamer always want to win there are an option to enter cheat code.
+The idea for this project it to make a playable game against the computer. First there should be a landing page that will show a hero image about the game and it will also contain intructions on how to play the game. And as every gamer always want to win, there are an option to enter cheat code.
 
 Use "godmode" as code to try it out.
 
@@ -51,7 +51,7 @@ A visitor to the site should:
 - Easily navigate the website.
 - Play a game for fun.
 - Get an understanding the Rock, Paper, Scissors game.
-- Be able to enter cheat code to be to always win.
+- Be able to enter cheat code to be able to always win.
 
 ### <a id="strategy"></a>Strategy
 
@@ -59,11 +59,11 @@ The goal is to make a well-functioning interesting website. The focus was on mak
 
 ### <a id="scope"></a>Scope
 
-For the purpose to show my knowledge in JavaScript, as well as doing something fun. And aslo something different and think outside the box with the possibility to enter cheat codes.
+For the purpose to show my knowledge in JavaScript, as well as doing something fun. And also something different and think outside the box with the possibility to enter cheat codes.
 
 ### <a id="structure"></a>Structure
 
-I aimed for a simple website that should contain as little clicks as possible. Also as litte scrolling as possible. Even though it's quite easy to scroll up and down on a cell phone is still wanted it to be possible to get a quick overview of each page. I wanted to minimize the usage of Media Querys and have a responsive site with using of precent on widths etc.
+I aimed for a simple website that should contain as little clicks as possible. Also as litte scrolling as possible. Even though it's quite easy to scroll up and down on a cell phone I still wanted it to be possible to get a quick overview of the game. I wanted to minimize the usage of Media Querys and have a responsive site by using precent in widths etc.
 
 **Website:**
 
