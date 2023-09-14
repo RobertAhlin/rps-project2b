@@ -120,7 +120,7 @@ The game area. I wanted it to be simple. At first I acually made it possible to 
 
 <img src="readmefiles/index-image.jpg" width="50%" alt="Image of the landing page."><br>
 <img src="readmefiles/gamepage-image.jpg" width="50%" alt="Image of the game page."><br>
-I've been using the responive layout a lot in inspect mode using Google Chrome.
+I've been using the responsive layout a lot in inspect mode using Google Chrome.
 
 ## <a id ="more-features"></a>More Features?
 
