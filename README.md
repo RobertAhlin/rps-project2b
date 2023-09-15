@@ -34,9 +34,9 @@ The live link can be found here - <a href="https://robertahlin.github.io/rps-pro
 
 The site is developed to be responsive for different devices.
 
-The idea for this project it to make a playable game against the computer. First there should be a landing page that will show a hero image about the game and it will also contain intructions on how to play the game. And as every gamer always want to win, there are an option to enter cheat code.
+The idea for this project it to make a playable game against the computer. But first there is a landing page that will show a hero image for the game and it will also contain intructions on how to play the game. And as every gamer always want to win, there are an option to enter cheat code.
 
-Use "godmode" as code to try it out.
+Use "godmode" as code to try it out. (Without the "".)
 
 # <a id="user-experience"></a>User Experience
 
@@ -46,7 +46,7 @@ The user of this website should be able to try out the concept of playing Rock, 
 
 A visitor to the site should:
 
-- Get a wow-feeling on the landing page.
+- Get a wow-feeling on the landing page and get interested to try the game.
 - Understand the purpose of this website quickly and easily.
 - Easily navigate the website.
 - Play a game for fun.
@@ -59,7 +59,7 @@ The goal is to make a well-functioning interesting website. The focus was on mak
 
 ### <a id="scope"></a>Scope
 
-For the purpose to show my knowledge in JavaScript, as well as doing something fun. And also something different and think outside the box with the possibility to enter cheat codes.
+For the purpose to show my knowledge in JavaScript, as well as doing something fun. And also add something different like thinking outside the box with the possibility to enter cheat code.
 
 ### <a id="structure"></a>Structure
 
@@ -191,4 +191,4 @@ All the text are authored by me.
 
 ### <a id="acknoledgements"></a>Acknowledgements
 
-- My mentor, Medale Oluwafemi, for great suggestions and help.
+- My mentor, Medale Oluwafemi, for great suggestions and help and for showing how use document tags at <a href="https://jsdoc.app/about-getting-started.html" target="_blank">https://JSDoc.app</a>

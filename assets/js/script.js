@@ -1,3 +1,4 @@
+// Initialize variables for game state
 let playerChoice = null;
 let robotChoice = null;
 let cheatCodeActivated = false;
@@ -24,7 +25,10 @@ function resetScores() {
     displayChoices('', '');
 }
 
-// When player makes a choice.
+/**
+ * Handle when the player makes a choice.
+ * @param {string} choice - The player's choice ('rock', 'paper', or 'scissors').
+ */
 function makePlayerChoice(choice) {
     playerChoice = choice;
     displayChoices(`You picked ${choice}`, "");
@@ -32,7 +36,10 @@ function makePlayerChoice(choice) {
     playGame();
 }
 
-// Generate robot's choice.
+/**
+ * Generate the robot's choice based on cheat code or random selection.
+ * @returns {string} - The robot's choice ('rock', 'paper', or 'scissors').
+ */
 function generateRobotChoice() {
     if (cheatCodeActivated) {
         // When cheat mode is on, robot always selects a losing choice.
@@ -53,49 +60,55 @@ function generateRobotChoice() {
     }
 }
 
-// Figure out who wins and show the result.
+/**
+ * Determine the winner and display the result.
+ * @param {string} playerChoice - The player's choice ('rock', 'paper', or 'scissors').
+ * @param {string} robotChoice - The robot's choice ('rock', 'paper', or 'scissors').
+ * @returns {string} - The result message.
+ */
 function setWinner(playerChoice, robotChoice) {
+    let result = '';
     if (cheatCodeActivated) {
         playerScore++;
         updatePlayerScore();
-        if (playerScore >= 10) { // Check if reached ten point.
-            return 'Congratulations! You succefully cheated your way to 10 points. You win! - Reset scores to play again.';
-        } else {
-            return ' - You win! (You cheater...)';
-        }      
+        result = playerScore >= 10 ? 'Congratulations! You successfully cheated your way to 10 points. You win! - Reset scores to play again.' : ' - You win! (You cheater...)';
     } else if (playerChoice === robotChoice) {
-        return " - It's a tie!";
-    } else if (
-        (playerChoice === 'rock' && robotChoice === 'scissors') ||
-        (playerChoice === 'paper' && robotChoice === 'rock') ||
-        (playerChoice === 'scissors' && robotChoice === 'paper')
-    ) {
-        playerScore++; // Increase player's score on win.
-        updatePlayerScore(); // Update and display player's score.
-        if (playerScore >= 10) { // Check if reached ten point.
-            return 'Congratulations! You where first to 10 points. You win the game! - Reset scores to play again.';
-        } else {
-            return ` - You win!`;
-        }
-        
+        result = " - It's a tie!";
     } else {
-        robotScore++; // Increase robot's score on win.
-        updateRobotScore(); // Update and display robot's score.
-        if (robotScore >= 10) { // Check if reached ten point.
-            return 'Sorry, robot was first to 10 points. The robot wins the game. - Reset scores to play again..';
-        } else {
-            return '- Robot wins!';
+        switch (playerChoice) {
+            case 'rock':
+                result = robotChoice === 'scissors' ? ' - You win!' : '- Robot wins!';
+                break;
+            case 'paper':
+                result = robotChoice === 'rock' ? ' - You win!' : '- Robot wins!';
+                break;
+            case 'scissors':
+                result = robotChoice === 'paper' ? ' - You win!' : '- Robot wins!';
+                break;
         }
-        
+        if (result === ' - You win!') {
+            playerScore++;
+            updatePlayerScore();
+            if (playerScore >= 10) {
+                result = 'Congratulations! You were first to 10 points. You win the game! - Reset scores to play again.';
+            }
+        } else if (result === '- Robot wins!') {
+            robotScore++;
+            updateRobotScore();
+            if (robotScore >= 10) {
+                result = 'Sorry, robot was first to 10 points. The robot wins the game. - Reset scores to play again.';
+            }
+        }
     }
+    return result;
 }
 
-// Show messages on the screen.
+// Display a message on the screen.
 function displayMessage(message) {
     document.getElementById('result').textContent = message;
 }
 
-// Show cheat code activated.
+// Display a cheat code activation message.
 function displayCheatMessage(cheatMessage) {
     document.getElementById('cheat-message').textContent = cheatMessage;
 }
@@ -106,7 +119,9 @@ function displayChoices(player, robot) {
     document.getElementById('choices').textContent = message;
 }
 
-// Play the game.
+/**
+ * Play the game and determine the winner.
+ */
 function playGame() {
     if (robotScore >= 10 || playerScore >= 10) { // Check if game over.
         displayChoices('Game over!', ' - Reset scores to play again.'); // Exit the function if game over.
@@ -121,7 +136,10 @@ function playGame() {
     }
 }
 
-// Activate cheat code.
+/**
+ * Handle the activation of the cheat code.
+ * @param {Event} event - The input event object.
+ */
 document.getElementById('cheat-code').addEventListener('input', function (event) {
     if (event.target.value.toLowerCase() === 'godmode') {
         cheatCodeActivated = true;
@@ -132,7 +150,9 @@ document.getElementById('cheat-code').addEventListener('input', function (event)
     }
 });
 
-// Reset the cheat code.
+/**
+ * Reset the cheat code and clear the activation message.
+ */
 function resetCheatCode() {
     cheatCodeActivated = false;
     document.getElementById('cheat-code').value = '';
@@ -162,8 +182,8 @@ image.addEventListener('mouseup', () => {
     image.src = 'assets/images/btn-reset-scores.jpg';
 });
 
-// For "Reset Cheat" button.
+// Event listener for resetting the cheat code.
 document.getElementById('reset-cheat').addEventListener('click', resetCheatCode);
 
-// For "Reset Scores" button.
+// Event listener for resetting the scores.
 document.getElementById('reset-scores').addEventListener('click', resetScores);
