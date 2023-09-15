@@ -35,13 +35,16 @@ function makePlayerChoice(choice) {
 // Generate robot's choice.
 function generateRobotChoice() {
     if (cheatCodeActivated) {
-        // When cheat mode is on, robot always select a losing choice.
-        if (playerChoice === 'rock') {
-            return 'scissors';
-        } else if (playerChoice === 'paper') {
-            return 'rock';
-        } else if (playerChoice === 'scissors') {
-            return 'paper';
+        // When cheat mode is on, robot always selects a losing choice.
+        switch (playerChoice) {
+            case 'rock':
+                return 'scissors';
+            case 'paper':
+                return 'rock';
+            case 'scissors':
+                return 'paper';
+            default:
+                return ''; // Handle invalid playerChoice here if needed
         }
     } else {
         let choices = ['rock', 'paper', 'scissors'];
