@@ -28,7 +28,7 @@ Rock, Paper, Scissors - The Game is constructed to show the use of my knowledge 
 
 # <a id="demo"></a>Demo
 
-<img src="readmefiles/amiresponsive.jpg" width="50%" alt="Website shown in different devices."><br>
+<img src="readmefiles/amiresponsive.jpg" alt="Website shown in different devices."><br>
 
 The live link can be found here - <a href="https://robertahlin.github.io/rps-project2b/" target="_blank">https://robertahlin.github.io/rps-project2b/</a>
 
