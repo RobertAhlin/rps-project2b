@@ -4,18 +4,25 @@ let robotChoice = null;
 let cheatCodeActivated = false;
 let playerScore = 0;
 let robotScore = 0;
+let waitingForRobot = false; // Add a variable to track if the robot is making a choice
 
-// Update and display the player's score.
+/**
+ * Update and display the player's score.
+ */
 function updatePlayerScore() {
     document.getElementById('player-score').textContent = playerScore;
 }
 
-// Update and display the robot's score.
+/**
+ * Update and display the robot's score.
+ */
 function updateRobotScore() {
     document.getElementById('robot-score').textContent = robotScore;
 }
 
-// Reset the scores and messages.
+/**
+ * Reset the scores and messages.
+ */
 function resetScores() {
     playerScore = 0;
     robotScore = 0;
@@ -23,17 +30,20 @@ function resetScores() {
     updateRobotScore();
     displayMessage('');
     displayChoices('', '');
+    waitingForRobot = false; // Reset the waiting state
 }
 
 /**
- * Handle when the player makes a choice.
+ * Set the player's choice.
  * @param {string} choice - The player's choice ('rock', 'paper', or 'scissors').
  */
 function makePlayerChoice(choice) {
-    playerChoice = choice;
-    displayChoices(`You picked ${choice}`, "");
-    displayMessage(""); // Clear the result message.
-    playGame();
+    if (!waitingForRobot) { // Check if the robot is not currently making a choice
+        playerChoice = choice;
+        displayChoices(`You picked ${choice}`, "");
+        displayMessage(""); // Clear the result message.
+        playGame();
+    }
 }
 
 /**
@@ -103,17 +113,27 @@ function setWinner(playerChoice, robotChoice) {
     return result;
 }
 
-// Display a message on the screen.
+/**
+ * Display a message on the screen.
+ * @param {string} message - The message to display.
+ */
 function displayMessage(message) {
     document.getElementById('result').textContent = message;
 }
 
-// Display a cheat code activation message.
+/**
+ * Display a cheat code activation message.
+ * @param {string} cheatMessage - The cheat code activation message.
+ */
 function displayCheatMessage(cheatMessage) {
     document.getElementById('cheat-message').textContent = cheatMessage;
 }
 
-// Display player's and computer's choices.
+/**
+ * Display player's and computer's choices.
+ * @param {string} player - The player's choice message.
+ * @param {string} robot - The robot's choice message.
+ */
 function displayChoices(player, robot) {
     let message = `${player} ${robot}`;
     document.getElementById('choices').textContent = message;
@@ -123,15 +143,17 @@ function displayChoices(player, robot) {
  * Play the game and determine the winner.
  */
 function playGame() {
-    if (robotScore >= 10 || playerScore >= 10) { // Check if game over.
+    if (robotScore >= 10 || playerScore >= 10 || waitingForRobot) { // Check if game over or waiting for the robot
         displayChoices('Game over!', ' - Reset scores to play again.'); // Exit the function if game over.
     } else {
+        waitingForRobot = true; // Set the waiting state to true
         // Delay showing robot choice for 1 second.
         setTimeout(() => {
             robotChoice = generateRobotChoice();
             displayChoices(`You played ${playerChoice}`, ` vs. Robot played ${robotChoice}`);
             let result = setWinner(playerChoice, robotChoice);
             displayMessage(result);
+            waitingForRobot = false; // Reset the waiting state after the robot makes a choice
         }, 1000);
     }
 }
