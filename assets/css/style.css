@@ -133,6 +133,7 @@ hr {
 #cheat-code {
     width: 60px;
 }
+
 /* Hero image on index page. */
 #hero-image {
     width: 70%;
@@ -185,6 +186,5 @@ hr {
     /* Hero image on index page. */
     #hero-image {
         width: 100%;
-}
-
+    }
 }
