@@ -180,14 +180,10 @@ Also, my mentor has tried the website.
 <ul>
 <li>For this project I want to credit the Google search engine. It's hard to remember how to write all codes.</li>
 <li>A lot of help comes from search hits at the "stack overflow" forums.</li>
-<li>Ideas and some code from my previous project <a href="https://robertahlin.github.io/motocross-in-action/" target="_blank">Motocross in action</a>.</li>
+<li>Some CSS style code from my previous project <a href="https://robertahlin.github.io/motocross-in-action/" target="_blank">Motocross in action</a>.</li>
 <li>Hand images of rock, paper and scissors from: <a href="https://www.pngaaa.com/detail/3313784" target="_blank">https://www.pngaaa.com/detail/3313784</a></li>
 <li>Image of explosion from <a href="https://www.vecteezy.com/png/9374808-fire-explode-png-design">https://www.vecteezy.com/png/9374808-fire-explode-png-design</a></li>
 </ul>
-
-Other that that:
-All the text are authored by me.
-
 
 ### <a id="acknowledgements"></a>Acknowledgements
 
