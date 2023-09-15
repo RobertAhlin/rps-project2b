@@ -141,7 +141,6 @@ The CSS Validator gave me two errors. One that I had forgot to write a unit on a
 which I changed to "position; fixed;".
 
 I also used Lighthouse in Chrome to find ways to increase the accessibility of the website.<br>
-<img src="readmefiles/lighthouse.jpg" alt="Gauges of the Lighthouse measuring"><br>
 
 Links to the validation
 <ul>
