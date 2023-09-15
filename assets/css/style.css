@@ -14,13 +14,17 @@ a {
     color: inherit;
 }
 
+/* Add an underline on hover links*/
 a:hover {
     text-decoration: underline;
-    /* Add an underline on hover */
 }
 
 hr {
     width: 80%;
+}
+
+.close-x {
+    text-align: right;
 }
 
 /* Div to show intructions for game on index page */
