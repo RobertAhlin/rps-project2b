@@ -174,21 +174,21 @@ document.getElementById('cheat-code').addEventListener('input', function (event)
 
 /**
  * Reset the cheat code and clear the activation message.
- * And also chow message if no code is active.
+ * And also show message if no code is active.
  */
 function resetCheatCode() {
     if (cheatCodeActivated === false) {
-            displayCheatMessage('No code active!');
+        displayCheatMessage('My dear fellow, you nutcase, there is nary a code active!');
     } else {
         cheatCodeActivated = false;
         document.getElementById('cheat-code').value = '';
         displayCheatMessage(' Cheat code reset.');
-
-        // Delay hiding "cheat code reset" message for 3 seconds.
-        setTimeout(() => {
-            document.getElementById('cheat-message').textContent = '';
-        }, 3000);
     }
+
+    // Delay hiding "cheat code reset" message for 5 seconds.
+    setTimeout(() => {
+        document.getElementById('cheat-message').textContent = '';
+    }, 5000);
 }
 
 // Event listeners for player's choice buttons.
